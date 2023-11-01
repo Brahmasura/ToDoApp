@@ -1,0 +1,21 @@
+
+
+@mixin primaryback{
+    background-color: #27374D;
+}
+
+@mixin primarytext{
+    color:whitesmoke;
+}
+
+@mixin y-sa{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin button{
+    background-color: #9DB2BF;
+    @include primarytext;
+}

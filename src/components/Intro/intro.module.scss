@@ -1,0 +1,15 @@
+@import "./../../Styles/mixin.module.scss";
+
+.introDiv {
+  width: 200px;
+  height: 100px;
+
+  vertical-align: center;
+  @include primaryback;
+  @include primarytext;
+  @include y-sa;
+
+  .button {
+    @include button;
+  }
+}
