@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useState } from "react";
 import style from "./item.module.scss";
+import ToDoItem from "../ToDoItem/ToDoItem";
 
-const Item = ({taskName}) => {
+const Item = ({ taskList, setTaskList }) => {
+ 
+
+
   return (
-   <div className={style.itemDiv}>
-    {taskName}
-    {/* <button onClick={handleEdit(index)}></button>
-    <button onClick={handleDelete(index)}></button> */}
-    </div>
-  )
-}
+    <>
+      {taskList.map((element, index) => (
+       <ToDoItem name={element.name} index={index} taskList={taskList} setTaskList={setTaskList}/>
+      ))}
+    </>
+  );
+};
 
 export default Item;

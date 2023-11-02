@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import style from "./intro.module.scss";
 
-const Intro = () => {
+const Intro = ({ taskList, setTaskList }) => {
   const [isReady, setIsReady] = useState(false);
   const [task, setTask] = useState("");
-  const [taskList, setTaskList] = useState([]);
 
   // handling add button click
   const handleAdd = () => {
@@ -17,11 +16,12 @@ const Intro = () => {
   };
 
   const handleSubmit = (task) => {
-    setTaskList((newTaskList) => [...newTaskList, {name : task}]);
-      setTask("");
+    const newTaskList = [...taskList, {name: task}];
+    setTaskList(newTaskList);
+    setTask("");
     setIsReady(false);
-    console.log(taskList);
   };
+
   return (
     <div className={style.introDiv}>
       {/* text or edit conditional */}
@@ -45,7 +45,7 @@ const Intro = () => {
       {/* button input based on Condition */}
       {isReady ? (
         <>
-          <button onClick={handleSubmit}>submit Task</button>
+          <button onClick={() => handleSubmit(task)}>submit Task</button>
         </>
       ) : (
         <>

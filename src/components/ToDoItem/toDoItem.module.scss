@@ -1,0 +1,17 @@
+@import "../../Styles/mixin.module.scss";
+
+.itemDiv{
+    width:200px;
+    height:100px;
+    @include primaryback;
+    @include primarytext;
+    @include y-sa;
+
+  .buttonDiv{
+    width:100%;
+    @include x-sa;
+    button{
+        @include button;
+    }
+  }
+}

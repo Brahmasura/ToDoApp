@@ -15,6 +15,12 @@
     align-items: center;
 }
 
+@mixin x-sa{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 @mixin button{
     background-color: #9DB2BF;
     @include primarytext;
