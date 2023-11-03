@@ -26,7 +26,7 @@ const ToDoItem = ({name, index, taskList, setTaskList}) => {
       setItemEdit(false);
     };
   
-  
+    // this function is to handle the delete the task from the array
     const handleDelete = (index) => {
       const newTaskList = [...taskList];
       newTaskList.splice(index, 1);

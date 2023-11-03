@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import style from "./item.module.scss";
+import React from "react";
+
 import ToDoItem from "../ToDoItem/ToDoItem";
 
 const Item = ({ taskList, setTaskList }) => {
